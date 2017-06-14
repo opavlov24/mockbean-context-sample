@@ -6,7 +6,7 @@ the context is cached.
 
 ## How to run
 
-Go to the project directory and run `./gradlew build` (or `./gradlew.bat`) and you'll see at the end of the output two instances of elasticsearch. If you remove @MockBean annotation from SecondElasticsearchRepositoryTest.dummyServiceToMock and run again, you'll see only one instance.
+Go to the project directory and run `./gradlew --rerun-tasks test -i` (or `./gradlew.bat ./gradlew --rerun-tasks test -i`) and you'll see the context is reloaded two times. If you remove @MockBean annotation from SecondElasticsearchRepositoryTest.dummyServiceToMock and run again, you'll see only one time.
 
 ## Example output
 
